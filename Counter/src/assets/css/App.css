@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+
+.counter {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 106px;
+    -webkit-border-radius: 106px;
+    -moz-border-radius: 106px;
+    -ms-border-radius: 106px;
+    -o-border-radius: 106px;
+    padding: 15px;
+}
+
+.count {
+    width: 500px;
+    text-align: center;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+
+.buttons {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0px 4px 20px 2px #dedede;
+    padding: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.buttons:hover {
+    cursor: pointer;
+    background-color: rgb(246, 246, 246);
+}
+
+.buttons:active {
+    background-color: rgb(255, 255, 255);
+    box-shadow: inset 0px 4px 9px 2px #d9d9d9;
+}
