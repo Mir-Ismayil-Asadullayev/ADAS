@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.1rem 1.1em;
+    align-items: center;
+}
+
+img {
+    width: 140px;
+    height: 90px;
+}
+
+.navs {
+    font-size: 1.3rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.navs:hover {
+    background-color: #404042;
+    cursor: pointer;
+}
+
+.desc {
+    text-align: center;
+}
