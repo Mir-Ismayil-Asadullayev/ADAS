@@ -1,40 +1,46 @@
 import { useRef } from "react";
 import { useState } from "react";
-import "./assets/css/App.css";
+import "./css/App.css";
 
 function App() {
   const interval1 = useRef();
   const interval2 = useRef();
   const activeChecker = useRef();
   const [num, setnum] = useState(0);
-  const color = Math.round(Math.random() * 1000);
 
   const plus = () => setnum((prev) => prev + 1);
   const minus = () => setnum((prev) => prev - 1);
 
   const plusInfinite = () => {
-    interval1.current = setInterval(() => setnum((prev) => prev + 1), 200);
+    interval1.current = setInterval(() => setnum((prev) => prev + 1), 180);
     activeChecker.current.style.boxShadow = "#000000 0px 0px 10px 1px inset";
   };
 
   const plusStop = () => {
     clearInterval(interval1.current);
-    activeChecker.current.style.boxShadow = "#000000 0px 0px 20px 1px";
+    activeChecker.current
+      ? (activeChecker.current.style.boxShadow = "#000000 0px 0px 20px 1px")
+      : false;
   };
 
   const minusInfinite = () => {
-    interval2.current = setInterval(() => setnum((prev) => prev - 1), 200);
+    interval2.current = setInterval(() => setnum((prev) => prev - 1), 180);
     activeChecker.current.style.boxShadow = "#000000 0px 0px 10px 1px inset";
   };
 
   const minusStop = () => {
     clearInterval(interval2.current);
-    activeChecker.current.style.boxShadow = "#000000 0px 0px 20px 1px";
+    activeChecker.current
+      ? (activeChecker.current.style.boxShadow = "#000000 0px 0px 20px 1px")
+      : false;
   };
+
+  window.addEventListener("mouseup", plusStop);
+  window.addEventListener("mouseup", minusStop);
 
   return (
     <>
-      <div className="container" style={{ background: `#${color}` }}>
+      <div className="container" style={{ background: `rgb(0,0,${num})` }}>
         <div className="counter" ref={activeChecker}>
           <button
             className="buttons"

@@ -1,6 +1,7 @@
 section {
     padding: 20px;
     text-align: center;
+    margin-bottom: 75px;
 }
 
 .featured-dog {
@@ -14,7 +15,7 @@ section {
 .dog-card {
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 22%;
     aspect-ratio: 1/2;
     padding: 35px;
@@ -24,6 +25,17 @@ section {
     text-align: left;
     box-sizing: border-box;
     word-break: break-all;
+    font-size: 17px;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.desc {
+    word-break: keep-all;
+    text-align: left;
 }
 
 .dog-card>img {
@@ -32,10 +44,6 @@ section {
     object-fit: cover;
     border-radius: 8px;
 
-}
-
-.dog-card>img {
-    background-image: url("../Images/no-image-available-vector-illustration-260nw-744886198.webp");
 }
 
 .dog-card>button {
