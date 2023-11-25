@@ -11,6 +11,7 @@ function App() {
   const storageData = localStorage.getItem("Tasks") ? JSON.parse(localStorage.getItem("Tasks")) : [];
   const divRef = useRef(null);
   const [bool, setBool] = useState(false);
+  const [opacity, setOpacity] = useState("");
   const [modal, setModal] = useState({ open: false, target: "", image: "" });
   const [scroll, setScroll] = useState(false);
   const [task, setTask] = useState({});
@@ -42,10 +43,11 @@ function App() {
 
   const tasksRemover = () => {
     if (modal.open && modal.target !== undefined && modal.image === "Bu tapşırığı ") {
-      setTasks(tasks.filter(item => item.text === modal.target ? false : item)); offModal();
+      setTasks(tasks.filter(item => item.text === modal.target ? false : item)); offModal(); setOpacity("");
     } else if (modal.open && modal.image === "removeChecked") {
-      tasks.length && setTasks(tasks.filter(item => item.done ? false : item)); offModal();
-    } else deleteAll(); offModal();
+      tasks.find(item => item.done) && setTasks(tasks.filter(item => item.done ? false : item)); offModal(); setOpacity("");
+    } else deleteAll(); offModal(); setOpacity("");
+
   };
 
   const offModal = () => { modal.open && setModal({ open: false }); bool && setBool(false); };
@@ -56,10 +58,27 @@ function App() {
 
   const selectAll = () => tasks.length && setTasks(tasks.map(item => item.done === false ? { ...item, done: true } : item));
 
+  switch (modal.image) {
+    case "removeChecked":
+      !opacity && tasks.find(item => item.done === true) && setOpacity("1");
+      break;
+    case "removeAll":
+      !opacity && setOpacity("1");
+      break;
+    case "Bu tapşırığı ":
+      !opacity && setOpacity("1");
+      break;
+    default:
+      opacity && setOpacity("");
+      break;
+  }
+  console.log('', opacity)
   return (
     <>
-      <div className="modalCover" style={{ zIndex: modal.open && "1" }}>
-        <div className="modal" style={{ transform: modal.open && "scale(1)" }}>
+      <div className="modalCover"
+        style={{ zIndex: opacity }}>
+        <div className="modal"
+          style={{ transform: opacity && "scale(1)" }}>
           <div>
             {
               modal.image === "removeAll"
@@ -75,8 +94,8 @@ function App() {
             <button className="beli" onClick={tasksRemover}>Bəli</button>
           </div>
         </div>
-      </div>
-      <div className="img" onClick={offModal} style={{ opacity: modal.open && 0.2 }}>
+      </div >
+      <div className="img" onClick={offModal} style={{ opacity: modal.open && opacity && 0.2 }}>
         <h1 className="todo">TO-DO</h1>
         <span
           className="warning"
@@ -135,9 +154,9 @@ function App() {
               Hazır tapşırıq sayı: <span className="stats">{tasks.filter((item, i, arr) => item.done && arr.length).length}</span>
             </div>
           </div>
-          <img src={recover} alt="recover" onClick={clearChecked} onDoubleClick={selectAll} className="recover" />
-          <img src={removeChecked} alt="removeChecked" onClick={askModal} className="removeChecked" />
-          <img src={removeAll} alt="removeAll" onClick={askModal} className="removeAll" />
+          <img title="Seçilmiş tapşırıqları təmizlə" src={recover} alt="recover" onClick={clearChecked} onDoubleClick={selectAll} className="recover" />
+          <img title="Bütün hazır tapşırıqları sil" src={removeChecked} alt="removeChecked" onClick={askModal} className="removeChecked" />
+          <img title="Bütün tapşırıqları sil" src={removeAll} alt="removeAll" onClick={askModal} className="removeAll" />
         </div>
       </div>
     </>
