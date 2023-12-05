@@ -1,0 +1,282 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000A18;
+  padding: 0 12px 0;
+}
+
+.mainWeather {
+  position: relative;
+  width: 100%;
+  height: 75%;
+  border-bottom-right-radius: 180px;
+  border-bottom-left-radius: 180px;
+  box-shadow: 0px 1px 25px 10px #00004a;
+  padding: 25px;
+}
+
+.mainWeather,
+.headerContainer,
+.temprature,
+.addInfo,
+.forecast {
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+
+
+.mainWeather::before {
+  content: "";
+  background-image: url("../images/ai_wallpapers-3001764.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+
+.searchContainer {
+  position: relative;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.search {
+  all: unset;
+  width: 100%;
+  padding: 15px 10px;
+  background-color: #ffff;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgb(1, 1, 91);
+}
+
+.search:focus {
+  outline: 3px solid #1e2cca;
+}
+
+.search::placeholder {
+  font-size: 1rem;
+}
+
+.locationIcon,
+.dateIcon {
+  width: 35px;
+  height: auto;
+  position: absolute;
+  top: -2px;
+  right: -20px;
+  filter: invert(1);
+  text-align: left;
+}
+
+.searchIcon {
+  position: absolute;
+  width: 40px;
+  height: auto;
+  top: 10px;
+  right: -9px;
+}
+
+.forecast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  margin: 10px 0 35px 0;
+  color: #ffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
+.forecast>span {
+  flex-basis: 150px;
+  text-align: center;
+}
+
+.forecast>span:hover {
+  cursor: pointer;
+  text-shadow: 0px 0px 5px #ffffff;
+  text-underline-offset: 13px;
+  text-decoration: underline;
+}
+
+.forecast>span:active {
+  text-decoration-color: #ffffff;
+  text-shadow: 0px 0px 20px #ffffff;
+}
+
+.mainContainer {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 40px auto 0;
+  height: 68%;
+  width: 79%;
+}
+
+.headerContainer {
+  display: flex;
+  width: 100%;
+  height: 20%;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.headerContainer,
+.temprature {
+  position: relative;
+}
+
+.tempratureIcon {
+  position: absolute;
+  width: 61px;
+  height: auto;
+  filter: invert(1);
+  left: -69px;
+  top: 40px;
+}
+
+.headerContainer::after,
+.temprature::after {
+  content: "";
+  width: 84%;
+  position: absolute;
+  bottom: 0px;
+  left: 8%;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(89 105 148);
+}
+
+.unit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.7rem;
+  text-shadow: 1px 8px 20px rgb(0, 0, 100);
+}
+
+.city,
+.date,
+.tempUnit,
+.humidity,
+.wind {
+  position: relative;
+  text-shadow: 1px 8px 20px rgb(0, 0, 100);
+  border-radius: 15px;
+  text-align: left;
+  word-spacing: 5px;
+}
+
+
+.headerContainer>* {
+  flex-basis: 238px;
+}
+
+.temprature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  font-size: 5.2rem;
+  font-family: 'Ubuntu', sans-serif;
+  color: #fff;
+}
+
+.addInfo {
+  display: flex;
+  width: 90%;
+  height: 20%;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #fff;
+  margin: auto;
+}
+
+.restWeather {
+  display: flex;
+  justify-content: space-evenly;
+  color: #000000;
+  margin: 35px auto;
+  text-align: center;
+  gap: 22px;
+}
+
+.restItems {
+  flex-basis: 160px;
+  height: 140px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  font-size: 1.2rem;
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background: rgb(5, 83, 151);
+  color: white;
+}
+
+.unitBtn {
+  all: unset;
+  border: 1px solid rgb(0, 0, 0);
+  width: 100px;
+  padding: 3px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.ball {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all 0.1s linear;
+}
+
+.ball:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 11px 6px #dbdbdb inset;
+  transform: translateX(150%);
+}
+
+.restItems>p,
+.restItems>img {
+  z-index: 2;
+  width: 55px;
+  margin: 3px 0;
+}
+
+.restItems>img {
+  background: rgb(174, 174, 174);
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #03076c;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-top: 1px solid rgb(144, 144, 144);
+  z-index: 1;
+}
+
+.tempUnit {
+  margin-left: 94px;
+}
