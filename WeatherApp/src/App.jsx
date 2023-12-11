@@ -25,8 +25,8 @@ function App() {
   const [toggleday, setToggleDay] = useState(false);
   const [week, setWeek] = useState({ got: true });
   const dateMain = new Date(+(toggleday ? forecast?.dt?.toString() + "111" : search.date?.toString() + "111"));
-  const sunrise = new Date(+(search.sunrise.toString() + "111"));
-  const sunset = new Date(+(search.sunset.toString() + "111"));
+  const sunrise = new Date(+(search.sunrise?.toString() + "111"));
+  const sunset = new Date(+(search.sunset?.toString() + "111"));
   const catchInput = (e) => setSearch({ ...search, name: e.target.value });
   const toggleBtn = () => setToggle(prev => !prev);
   const toggleDay = () => setToggleDay(prev => !prev);
@@ -97,7 +97,7 @@ function App() {
 
   let date = "";
   let newuniquie = uniqueArr.filter(item => {
-    if (item.date !== dateMain.toString().slice(0, 3) && item.date !== date) {
+    if (item.date !== dateMain?.toString().slice(0, 3) && item.date !== date) {
       date = item.date;
       return item;
     }
