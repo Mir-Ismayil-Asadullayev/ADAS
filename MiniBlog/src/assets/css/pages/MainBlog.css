@@ -1,0 +1,358 @@
+.imageSection {
+    height: 600px;
+    width: 100%;
+    font-family: 'Lora';
+}
+
+.imageSection::before {
+    content: "";
+    background-image: url("../../images/Image.png");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.95;
+    height: 600px;
+    width: 100%;
+}
+
+.imageSection>* {
+    color: #FFF;
+    font-family: 'Lora', serif;
+    position: relative;
+    top: 278px;
+    left: 70px;
+    z-index: 1;
+}
+
+.adventure {
+    width: 77px;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    font-family: 'Roboto';
+    font-size: 10px;
+    font-weight: 700;
+    box-sizing: content-box;
+}
+
+.overlay {
+    width: 530px;
+    font-family: 'Lora';
+    font-size: 36px;
+    font-weight: 700;
+    margin: 20px 0 15px 0;
+}
+
+.date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 530px;
+    font-family: 'Lora';
+    font-size: 14px;
+    font-weight: 400;
+    gap: 11px;
+}
+
+.dateLast {
+    line-height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 40px;
+}
+
+.ballsContainer {
+    display: flex;
+    gap: 15px;
+    width: 54px;
+}
+
+.balls {
+    margin: 62px 0 0 0;
+    width: 8px;
+    height: 8px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+.ballsMain {
+    background-color: #fff;
+}
+
+.popularTopics {
+    width: 100%;
+    padding: 150px 70px 30px 70px;
+    font-family: 'Lora';
+}
+
+.popularTitle {
+    color: #495057;
+    font-family: 'Lora';
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.topicsNav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popularTitle {
+    margin: 0 0 30px 0;
+}
+
+.navList {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px 0;
+}
+
+.navItem {
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.cardsMain {
+    width: 100%;
+    padding: 10px 67px 150px 78px;
+    display: flex;
+    justify-content: start;
+    flex-flow: row wrap;
+    gap: 50px 22px;
+}
+
+.cardMain {
+    width: 327px;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
+}
+
+.cardImgMain {
+    width: 327px;
+    height: 280px;
+    position: relative;
+}
+
+.cardImgDescMain {
+    width: 77px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #FFF;
+    font-family: 'Roboto';
+    font-size: 8px;
+    font-weight: 700;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.20);
+    text-align: center;
+    box-sizing: content-box;
+
+}
+
+.cardImgMain>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.cardDate {
+    color: #6C757D;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.cardTitle {
+    width: 273px;
+    color: #495057;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.cardDesc {
+    color: #6C757D;
+    font-size: 13.5px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.secondImgMain {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    font-family: 'Lora';
+}
+
+.secondImgMain::after {
+    content: "";
+    background-image: url("../../images/sectionImg2.png");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.95;
+    height: 600px;
+    width: 100%;
+}
+
+.secondWrapperMain {
+    position: absolute;
+    z-index: 1;
+    color: #E5E5E5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.fashionMain {
+    width: 62px;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 10px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 0 auto 24px auto;
+}
+
+.overlay2Main {
+    width: 530px;
+    color: #FFF;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Lora';
+    margin: 0 auto 20px;
+}
+
+.overlayDescMain {
+    width: 420px;
+    color: #E5E5E5;
+    text-align: center;
+    font-family: 'Lora';
+    font-size: 12px;
+    margin: 0 auto 24px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.line2Main {
+    margin: 0 auto 14px;
+}
+
+.overlay2DateMain {
+    color: #E5E5E5;
+    font-family: 'Lora';
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.editors {
+    width: 100%;
+    padding: 149px 70px;
+}
+
+.thumbnailTitle {
+    margin: 0 0 70px 0;
+}
+
+.thumbnailWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.thumbnails {
+    width: 447px;
+    height: 370px;
+    position: relative;
+}
+
+.thumbnails>img {
+    width: 100%;
+    height: 100%;
+}
+
+.thumbnailTitle {
+    color: #495057;
+    font-family: 'Lora';
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.thumbnailCategoryMain {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 62px;
+    box-sizing: content-box;
+    padding: 5px 10px;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.thumbnailContentWrapper {
+    position: absolute;
+    top: 153px;
+    left: 40px;
+    width: 340px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: left;
+    gap: 15px;
+    color: #E5E5E5;
+    font-family: 'Lora';
+}
+
+.thumbDate {
+    color: #E5E5E5;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.thumbTitle {
+    width: 270px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    font-family: 'Lora';
+}
+
+.thumbDesc {
+    width: 340px;
+    color: #E5E5E5;
+    font-family: 'Lora';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.active {
+    color: orange;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}

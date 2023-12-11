@@ -1,0 +1,262 @@
+.imageSectionMainItem {
+    height: 600px;
+    width: 100%;
+    font-family: 'Lora';
+}
+
+.imageSectionMainItem::before {
+    content: "";
+    background-image: url("../../images/MainItemImg.png");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.95;
+    height: 600px;
+    width: 100%;
+    filter: contrast(110%);
+}
+
+.imageSectionMainItem>* {
+    color: #FFF;
+    font-family: 'Lora', serif;
+    z-index: 1;
+}
+
+.imageSectionMainItemWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 13px;
+}
+
+.adventureMainItem {
+    width: 77px;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    font-family: 'Roboto';
+    font-size: 10px;
+    font-weight: 700;
+    box-sizing: content-box;
+}
+
+.overlayMainItem {
+    width: 530px;
+    font-family: 'Lora';
+    font-size: 36px;
+    font-weight: 700;
+    margin: 20px 0 15px 0;
+    text-align: center;
+}
+
+.dateMainItem {
+    width: 420px;
+    color: #E5E5E5;
+    text-align: center;
+    font-family: 'Lora';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.dateAuthorMainItem {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Lora';
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.MainSectionBlogItem {
+    width: 100%;
+    padding: 100px 70px;
+    display: flex;
+    align-items: start;
+    gap: 53px;
+}
+
+.MainItemDate {
+    display: flex;
+    gap: 10px;
+}
+
+.MainItemDate>img {
+    align-self: center;
+}
+
+.BlogWrapper {
+    width: 860px;
+}
+
+.BlogTitle {
+    color: #D4A373;
+    font-family: 'Lora';
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.BlogContent {
+    color: #495057;
+    font-family: 'Lora';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.BlogLine {
+    margin: 50px 0;
+}
+
+.BlogContacts {
+    margin: 50px 0;
+}
+
+.BlogCategories {
+    display: flex;
+    gap: 13px;
+}
+
+.BlogCategoryNames {
+    color: #6C757D;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 1px solid #E5E5E5;
+    padding: 5px 10px;
+}
+
+.credFullname {
+    color: #343A40;
+    font-family: 'Lora';
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.credProffession {
+    color: #6C757D;
+    font-family: 'Lora';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.Credentials {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.BlogAuthor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socialContacts>img {
+    width: 20px;
+    height: auto;
+    margin: 0 10px;
+}
+
+.editors {
+    width: 100%;
+    padding: 149px 70px;
+    background: rgba(229, 229, 229, 0.30);
+}
+
+.thumbnailTitle {
+    margin: 0 0 70px 0;
+}
+
+.thumbnailWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.thumbnails {
+    width: 447px;
+    height: 370px;
+    position: relative;
+}
+
+.thumbnails>img {
+    width: 100%;
+    height: 100%;
+}
+
+.thumbnailTitle {
+    color: #495057;
+    font-family: 'Lora';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+.thumbnailCategoryMain {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 62px;
+    box-sizing: content-box;
+    padding: 5px 10px;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.thumbnailContentWrapper {
+    position: absolute;
+    top: 153px;
+    left: 40px;
+    width: 340px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: left;
+    gap: 15px;
+    color: #E5E5E5;
+    font-family: 'Lora';
+}
+
+.thumbDate {
+    color: #E5E5E5;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.thumbTitle {
+    width: 270px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    font-family: 'Lora';
+}
+
+.thumbDesc {
+    width: 340px;
+    color: #E5E5E5;
+    font-family: 'Lora';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}

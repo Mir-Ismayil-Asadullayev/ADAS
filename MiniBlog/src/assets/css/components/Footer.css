@@ -1,0 +1,78 @@
+.footer {
+    width: 100%;
+    height: 488px;
+    background: #212529;
+    color: #E5E5E5;
+    font-family: 'Lora', serif;
+}
+
+.mainFooter {
+    padding: 106px 208px 106px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.titles {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.infoBoxes1 {
+    flex-basis: 188px;
+}
+
+.infoBoxes2 {
+    flex-basis: 101px;
+}
+
+.infoBoxes3 {
+    flex-basis: 110px;
+}
+
+.infoBoxes4 {
+    flex-basis: 172px;
+}
+
+.infoBoxes1,
+.infoBoxes2,
+.infoBoxes3,
+.infoBoxes4 {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 16px;
+}
+
+.infoContent {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.infoBoxes4 img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+.images {
+    display: flex;
+    gap: 18px;
+}
+
+.secondaryFooter {
+    height: 88px;
+    background: #343A40;
+    padding: 31px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #E5E5E5;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.subscribe {
+    color: #E5E5E5;
+    font-weight: 400;
+}
